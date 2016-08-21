@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+def config = rootProject.ext.config;
+def libs = rootProject.ext.libraries;
+
+android {
+    compileSdkVersion config.compileSdkVersion
+    buildToolsVersion config.buildToolsVersion
+    defaultConfig {
+        applicationId config.package
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
+        versionCode config.versionCode
+        versionName config.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:${libs.support}"
+    compile "com.android.support:design:${libs.support}"
+    testCompile 'junit:junit:4.12'
+
+    compile "com.google.android.gms:play-services:${libs.playServices}"
+
+
+    // Firebase libs
+    compile "com.google.firebase:firebase-core:${libs.firebase}"
+    compile "com.google.firebase:firebase-database:${libs.firebase}"
+    compile "com.google.firebase:firebase-crash:${libs.firebase}"
+    compile "com.google.firebase:firebase-messaging:${libs.firebase}"
+    compile "com.google.firebase:firebase-database:${libs.firebase}"
+
+}
+apply plugin: 'com.google.gms.google-services'

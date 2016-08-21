@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1060459011916",
+    "firebase_url": "https://fir-poc-a72cf.firebaseio.com",
+    "project_id": "fir-poc-a72cf",
+    "storage_bucket": "fir-poc-a72cf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060459011916:android:eab12edf1e757278",
+        "android_client_info": {
+          "package_name": "com.shivamdev.firebasepoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060459011916-icmj8n13lcl2go7jdh05kec7mlr0vsu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv8_z9YtNGMBVioWCgOl2ALmyt1PmcIfA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
